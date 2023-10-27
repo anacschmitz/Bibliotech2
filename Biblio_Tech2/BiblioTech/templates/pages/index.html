@@ -1,0 +1,53 @@
+{% load static %}
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=", initial-scale=1.0">
+  <title>BiblioTech</title>
+  <link rel="stylesheet" href="{% static 'css/global.css' %}">
+</head>
+<nav class="navbar">
+    <h2>Biblio Tech</h2>
+</nav>
+<body>
+<main>
+
+    <section id="" class="about">
+        <table class="table">
+            <thead>
+            <th>Título</th>
+            <th>Preço</th>
+            <th>Quantidade</th>
+            <th>Descrição</th>
+            </thead>
+            <tbody>
+            <tr>
+                {% for livro in livros %}
+                <td> {{ livro.nomeLivro }} </td>
+                <td>R${{ livro.qtdPaginas}}</td>
+                <td>R${{ produto.autor }}</td>
+                <td>{{ produto.qtdLivros }}</td>
+            </tr>
+            {% endfor %}
+            </tbody>
+
+        </table>
+        <div class="paginação">
+            <ul class="pagination">
+                <li><a href="#">«</a></li>
+                <li><a href="#">1</a></li>
+                <li><a class="active" href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">5</a></li>
+                <li><a href="#">6</a></li>
+                <li><a href="#">7</a></li>
+                <li><a href="#">»</a></li>
+            </ul>
+        </div>
+
+        <!-- {%for produto in produtos %}
+        <h1>{{ produto.name }} - R${{ produto.price }}</h1>
+        {% endfor %} -->
+</body>
+</html>
