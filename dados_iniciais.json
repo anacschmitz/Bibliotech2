@@ -1,0 +1,167 @@
+[
+    {
+        "model": "accounts.estudante",
+        "pk": 1,
+        "fields": {
+            "nomeEstudante": "Marina Silva",
+            "cpf": "0000000000",
+            "rua": "Joao Pedro",
+            "bairro": "Nova Palhoça",
+            "cidade": "Palhoça",
+            "cep": "88135-000",
+            "password": "123",
+            "email": "marina@gmail.com",
+            "matriculaEstudante": "1234567",
+            "curso": "ADS"
+        }
+    },
+    {
+        "model": "accounts.customuser",
+        "pk": 1,
+        "fields": {
+            "username": "Marina Silva",
+            "email": "marina@gmail.com",
+            "password": "123",
+            "estudante": 1
+        }
+    },
+    {
+        "model": "BiblioTech.genero",
+        "pk": 1,
+        "fields": {
+            "genero": "Romance"
+        }
+    },
+    {
+        "model": "BiblioTech.genero",
+        "pk": 2,
+        "fields": {
+            "genero": "Terror"
+        }
+    },
+    {
+        "model": "BiblioTech.genero",
+        "pk": 3,
+        "fields": {
+            "genero": "Drama"
+        }
+    },
+    {
+        "model": "BiblioTech.genero",
+        "pk": 4,
+        "fields": {
+            "genero": "Comédia"
+        }
+    },
+    {
+        "model": "BiblioTech.genero",
+        "pk": 5,
+        "fields": {
+            "genero": "Best Sellers"
+        }
+    },
+    {
+        "model": "BiblioTech.livro",
+        "pk": 1,
+        "fields": {
+            "estudante": 1,
+            "nomeLivro": "A Menina que Roubava Livros",
+            "generoLivro": 3,
+            "qtdPaginas": 255,
+            "autor": "Markus Zusak",
+            "qtdLivros": 10,
+            "qtdLivrosEstoque": 10
+        }
+    },
+    {
+        "model": "BiblioTech.livro",
+        "pk": 1,
+        "fields": {
+            "estudante": 1,
+            "nomeLivro": "A Menina que Roubava Livros",
+            "generoLivro": 3,
+            "qtdPaginas": 255,
+            "autor": "Markus Zusak",
+            "qtdLivros": 10,
+            "qtdLivrosEstoque": 10
+        }
+    },
+    {
+        "model": "BiblioTech.livro",
+        "pk": 2,
+        "fields": {
+            "estudante": 1,
+            "nomeLivro": "É Assim que acaba",
+            "generoLivro": 1,
+            "qtdPaginas": 399,
+            "autor": "Colleen Hoover",
+            "qtdLivros": 4,
+            "qtdLivrosEstoque": 10
+        }
+    },
+    {
+        "model": "BiblioTech.livro",
+        "pk": 3,
+        "fields": {
+            "estudante": 1,
+            "nomeLivro": "Harry Potter e a Pedra Filosofal",
+            "generoLivro": 5,
+            "qtdPaginas": 312,
+            "autor": "J.K. Rowling",
+            "qtdLivros": 10,
+            "qtdLivrosEstoque": 10
+        }
+    },
+    {
+        "model": "BiblioTech.livro",
+        "pk": 4,
+        "fields": {
+            "estudante": 1,
+            "nomeLivro": "Harry Potter e a Câmera Secreta",
+            "generoLivro": 5,
+            "qtdPaginas": 354,
+            "autor": "J.K. Rowling",
+            "qtdLivros": 2,
+            "qtdLivrosEstoque": 10
+        }
+    },
+    {
+        "model": "BiblioTech.livro",
+        "pk": 5,
+        "fields": {
+            "estudante": 1,
+            "nomeLivro": "Harry Potter e o Prisioneiro de Azkaban",
+            "generoLivro": 5,
+            "qtdPaginas": 458,
+            "autor": "J.K. Rowling",
+            "qtdLivros": 6,
+            "qtdLivrosEstoque": 10
+        }
+    },
+    {
+        "model": "BiblioTech.livro",
+        "pk": 6,
+        "fields": {
+            "estudante": 1,
+            "nomeLivro": "Harry Potter e o Cálice de Fogo",
+            "generoLivro": 5,
+            "qtdPaginas": 753,
+            "autor": "J.K. Rowling",
+            "qtdLivros": 2,
+            "qtdLivrosEstoque": 10
+        }
+    },
+    {
+        "model": "BiblioTech.livro",
+        "pk": 7,
+        "fields": {
+            "estudante": 1,
+            "nomeLivro": "Harry Potter e a Ordem da Fênix",
+            "generoLivro": 5,
+            "qtdPaginas": 987,
+            "autor": "J.K. Rowling",
+            "qtdLivros": 2,
+            "qtdLivrosEstoque": 10
+        }
+    }
+]

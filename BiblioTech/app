@@ -1,0 +1,44 @@
+from django.apps import AppConfig
+from .models import Livro, Genero
+from accounts.models import CustomUser, Estudante
+
+
+class SeuAppConfig(AppConfig):
+    default_auto_field = 'django.db.models.BigAutoField'
+    name = 'BiblioTech'
+
+    def ready(self):
+        nomeEstudante = 'Marina Silva'
+        email = 'marina@gmail.com'
+        password = '123'
+        estudanteDefault = Estudante.objects.create(nomeEstudante=nomeEstudante, cpf='0000000000', rua='Joao Pedro',
+                                                    bairro='Nova Palhoça', cidade='Palhoça', cep='88135-000',
+                                                    password=password, email=email, matriculaEstudante='1234567',
+                                                    curso='ADS')
+        user = CustomUser.objects.create_user(username=nomeEstudante, email=email, password=password)
+        user.estudante = estudanteDefault
+        user.save()
+
+        # Registros de Gêneros e Livros:
+
+        rom = Genero.objects.create('Romance')
+        terror = Genero.objects.create('Terror')
+        drama = Genero.objects.create('Drama')
+        comedia = Genero.objects.create('Comédia')
+        bs = Genero.objects.create('Best Sellers')
+
+        Livro.objects.create(estudante=estudanteDefault, nomeLivro='A Menina que Roubava Livros', genero=drama,
+                             qtdPaginas='255',autor='Markus Zusak', qtdLivros='10')
+        Livro.objects.create(estudante=estudanteDefault, nomeLivro='É Assim que acaba', genero=rom, qtdPaginas='399',
+                             autor='Colleen Hoover', qtdLivros='4')
+        Livro.objects.create(estudante=estudanteDefault, nomeLivro='Harry Potter e a Pedra Filosofal', genero=bs,
+                             qtdPaginas='312', autor='J.K. Rowling', qtdLivros='10')
+        Livro.objects.create(estudante=estudanteDefault, nomeLivro='Harry Potter e a Câmera Secreta', genero=bs,
+                             qtdPaginas='354', autor='J.K. Rowling', qtdLivros='2')
+        Livro.objects.create(estudante=estudanteDefault, nomeLivro='Harry Potter e o Prisioneiro de Azkaban',
+                             genero=bs, qtdPaginas='458', autor='J.K. Rowling', qtdLivros='6')
+        Livro.objects.create(estudante=estudanteDefault, nomeLivro='Harry Potter e o Cálice de Fogo',
+                             genero=bs, qtdPaginas='753', autor='J.K. Rowling', qtdLivros='2')
+        Livro.objects.create(estudante=estudanteDefault, nomeLivro='Harry Potter e a Ordem da Fênix',
+                             genero=bs, qtdPaginas='987', autor='J.K. Rowling', qtdLivros='2')
+
